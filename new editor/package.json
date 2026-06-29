@@ -1,0 +1,22 @@
+{
+  "name": "opencode-editor",
+  "private": true,
+  "workspaces": [
+    "packages/shared",
+    "packages/engine",
+    "packages/editor",
+    "packages/desktop"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=packages/editor",
+    "build": "npm run build --workspaces",
+    "typecheck": "tsc --noEmit --workspaces",
+    "lint": "eslint packages/*/src --ext .ts,.tsx"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^9.0.0"
+  }
+}
